@@ -1,0 +1,30 @@
+package test;
+
+class Circle{
+	double r;
+	Circle(){      //默认半径为1
+		r = 1;    
+	}
+	Circle(double newr){   //半径为其他值
+		r = newr;
+	}
+	double getArea() {
+		return r*r*Math.PI;
+	}
+	void setr(double newr) {
+		r = newr;
+	}
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+	    Circle circle1 = new Circle();
+	    System.out.println("圆的半径为 " + circle1.r + "面积为" +circle1.getArea());
+	    
+	    Circle circle2 = new Circle(5);
+	    System.out.println("圆的半径为 " + circle2.r + "面积为" +circle2.getArea());
+	    
+	    circle2.setr(10);
+	    System.out.println("圆的半径为 " + circle2.r + "面积为" +circle2.getArea());
+	}
+}
