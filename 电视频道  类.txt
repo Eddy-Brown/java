@@ -1,0 +1,41 @@
+public class TV{
+	int chan = 1;    //默认频道为1
+	int vol = 1;     //默认声音为1
+	boolean on = false;   //默认电视为关
+	
+	public TV() {
+	}
+	
+	public void turnOn() {
+		on = true;
+	}
+	
+	public void turnOff() {
+		on = false;
+	}
+	
+	public void setchan(int newchan) {
+		chan = newchan;
+	}
+	
+	public void setvol(int newvol) {
+		vol = newvol;
+	}
+}
+
+package test;
+
+public class Test1 {
+	public static void main(String[] args) {
+		TV tv1 = new TV();
+		tv1.turnOn();
+		tv1.setchan(30);
+		tv1.setvol(3);
+		
+		TV tv2 = new TV();
+		tv2.turnOn();
+		
+		System.out.println("tv1的频道为 " + tv1.chan + " 声音为 " + tv1.vol);
+		System.out.println("tv2的频道为 " + tv2.chan + " 声音为 " + tv2.vol);
+	}
+}
