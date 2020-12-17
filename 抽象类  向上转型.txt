@@ -1,0 +1,23 @@
+package test;
+
+abstract class Animal{
+	public void cy() {  //有方法体的普通方法
+		System.out.println("汪 汪");
+	}
+	abstract public void cry();  //没有方法体的抽象方法
+}
+
+class Cat extends Animal{   //抽象类的子类，是一个普通类
+	@Override
+	public void cry() {     //重写抽象类
+		System.out.println("喵 ");
+	}
+}
+
+public class Test1{
+	public static void main(String args[]) {
+		Animal a = new Cat();   //向上转型
+		a.cry();     //调用被子类重写过的方法
+		a.cy();      //调用原抽象类的普通方法
+	}
+}
