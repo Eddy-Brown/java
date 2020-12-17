@@ -1,0 +1,30 @@
+package test;
+
+abstract class Animal{
+	String name;
+	int age;
+	abstract public void cry();
+}
+
+class Dog extends Animal{
+	@Override
+	public void cry() {
+		System.out.println("汪 汪");
+	}
+}
+
+class Cat extends Animal{
+	@Override
+	public void cry() {
+		System.out.println("喵 ");
+	}
+}
+
+public class Test1{
+	public static void main(String args[]) {
+		Dog a = new Dog();
+		a.cry();
+		Cat b = new Cat();
+		b.cry();
+	}
+}
