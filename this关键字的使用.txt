@@ -1,0 +1,52 @@
+package test;
+
+public class Test{
+	public static void main(String [] args){
+		Person p1 = new Person();
+		
+		p1.setAge(20);
+		p1.setName("张三");
+		p1.setGender("男");
+		
+		System.out.println(""+p1.getName()+" 今年"+p1.getAge()+"岁 性别为："+p1.getGender());
+	}
+	
+}
+
+class Person{
+	private String name;
+	private int age;
+	private String gender;
+	
+	public Person(){}
+	
+	public  Person(String name,int age,String gender){
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setAge(int age){
+		this.age = age;
+	}
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public void setGender(String gender){
+		this.gender = gender;
+	}
+	
+	public String getGender(){
+		return gender;
+	}
+}
