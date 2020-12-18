@@ -1,0 +1,13 @@
+package test;
+
+abstract class A{
+	public static void print(){  //静态方法
+		System.out.println("Helllo world");
+	}
+}
+
+public class Test{
+	public static void main(String arg[]) {
+		A.print();   //可以不实例化直接被调用
+	}
+}
